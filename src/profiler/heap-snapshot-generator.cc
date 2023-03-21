@@ -2710,7 +2710,7 @@ bool HeapSnapshotGenerator::GenerateSnapshot() {
   base::Optional<HandleScope> handle_scope(base::in_place, isolate);
   v8_heap_explorer_.CollectGlobalObjectsTags();
 
-  heap_->CollectAllAvailableGarbage(GarbageCollectionReason::kHeapProfiler);
+  // heap_->CollectAllAvailableGarbage(GarbageCollectionReason::kHeapProfiler);
 
   NullContextForSnapshotScope null_context_scope(isolate);
   IsolateSafepointScope scope(heap_);
